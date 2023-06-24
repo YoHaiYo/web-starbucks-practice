@@ -22,6 +22,7 @@ searchInputEl.addEventListener('blur', function () {
 
 // 스크롤하면 뱃지 사라지게 만들기
 const badgeEl = document.querySelector('header .badges');
+const toTopEl = document.querySelector('#to-top');
 
 /// lodash 패키지
 // _.throttle(함수, 시간) : 0.3초마다 실행되게 해주기. 이거 안하면 스크롤할때마다 수백번씩 실행됨.
@@ -34,14 +35,30 @@ window.addEventListener('scroll', _.throttle(function() {
       opacity: 0,
       display: 'none'
     });
+    // 버튼 보이기
+    gsap.to(toTopEl, .2, {
+      x: 0
+    });
   } else {
     //뱃지 보이기
     gsap.to(badgeEl, .6, {
       opacity: 1,
       display: 'block'
     });
+    // 버튼 숨기기
+    gsap.to(toTopEl, .2, {
+      x: 100
+    });
   } 
 }, 300));
+
+/// ScrollToPlugin 패키지
+// to-top 누르면 최상단으로 이동.
+toTopEl.addEventListener('click', function () {
+  gsap.to(window, .7, {
+    scrollTo: 0
+  });
+});
 
 /// gsap 패키지 - fade in 함수
 const fadeEls = document.querySelectorAll('.visual .fade-in');
@@ -145,3 +162,6 @@ spyEls.forEach(function(spyEl) {
     .setClassToggle(spyEl, 'show')
     .addTo(new ScrollMagic.Controller());
 });
+
+const thisYear = document.querySelector('.this-year');
+thisYear.textContent = new Date().getFullYear(); // 2023 (올해년도 출력)

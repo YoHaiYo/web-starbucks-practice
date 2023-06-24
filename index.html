@@ -30,8 +30,9 @@
   <link rel="stylesheet" href="./css/main.css"/>
   <!-- lodash -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <!-- gsap -->
+  <!-- gsap & ScrollToPlugin -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/gsap.min.js" integrity="sha512-qF6akR/fsZAB4Co1QDDnUXWnaQseLGXoniuSuSlPQK6+aWhlMZcHzkasCSlnWoe+TJuudlka1/IQ01Dnhgq95g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollToPlugin.min.js" integrity="sha512-5ZqpMmz0hz6IocEQqdQ3sns2rJ+8ODVbZflfapvz26ZaP3nZrEjnNrpOaEW97bQYIg0XbkjFdZUun701YjOr5Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
   <!-- SWIPER -->
   <link rel="stylesheet" href="https://unpkg.com/swiper@6.8.4/swiper-bundle.min.css" />
@@ -634,7 +635,7 @@
   <footer>
     <div class="inner">
       <ul class="menu">
-        <li><a href="javascript:void(0)">개인정보처리방침</a></li>
+        <li><a href="javascript:void(0)" class="green">개인정보처리방침</a></li>
         <li><a href="javascript:void(0)">영상정보처리기기 운영관리 방침</a></li>
         <li><a href="javascript:void(0)">홈페이지 이용약관</a></li>
         <li><a href="javascript:void(0)">위치정보 이용약관</a></li>
@@ -654,9 +655,18 @@
         <span>TEL : 02) 3015-1100 / FAX : 02) 3015-1106</span>
         <span>개인정보 책임자 : 강기원</span>
       </div>
+      
+      <p class="copyright">
+        &copy;<span class="this-year"></span> Starbucks Coffee Company. All Rights Reserved.
+      </p>
+      <img src="./images/starbucks_logo_only_text.png" alt="starbucks_logo_only_text" class="logo"/>
 
     </div>
   </footer>
+
+  <div id="to-top">
+    <div class="material-icons">arrow_upward</div>
+  </div>
 
 </body>
 </html>

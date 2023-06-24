@@ -1,5 +1,4 @@
-// const { default: Swiper } = require("swiper"); 
-// 위에 이거 때문에 몇시간동안 코드 비교함... 갑자기 자동생성된듯하다. 대체 뭐였을까..?
+const { default: Swiper } = require("swiper");
 
 /// search 아이콘눌러도 focus되게하는 로직입니다.
 const searchEl = document.querySelector('.search');

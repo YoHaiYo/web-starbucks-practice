@@ -10,11 +10,11 @@
  function onYouTubeIframeAPIReady() { // 함수이름 바꾸면 인식안됨 !
   // <div id="player"></div>
    new YT.Player('player', {
-     videoId: 'bwmSjveL3Lc', // 최초 재생할 유튜브 영상 ID
+     videoId: 'ZeerrnuLi5E', // 최초 재생할 유튜브 영상 ID
      playerVars:{
       autoplay: true, //자동 재생 유무
       loop: true, // 반복 재생 유무
-      playlist : 'bwmSjveL3Lc' // 반복재생할 영상 ID 목록
+      playlist : 'ZeerrnuLi5E' // 반복재생할 영상 ID 목록
      },
      events: {
       onReady: function (event) {

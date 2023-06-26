@@ -20,6 +20,7 @@ searchInputEl.addEventListener('blur', function () {
   searchInputEl.setAttribute('placeholder', '');
 });
 
+/// gsap 패키지
 // 스크롤하면 뱃지 사라지게 만들기
 const badgeEl = document.querySelector('header .badges');
 const toTopEl = document.querySelector('#to-top');
@@ -61,6 +62,7 @@ toTopEl.addEventListener('click', function () {
 });
 
 /// gsap 패키지 - fade in 함수
+// 음료 이미지가 순차적으로 fade in해서 나타남 ! 
 const fadeEls = document.querySelectorAll('.visual .fade-in');
 fadeEls.forEach(function(fadeEl, index){
   // gsap.to(요소, 지속시간(s), 옵션);
@@ -79,7 +81,6 @@ new Swiper('.notice-line .swiper-container', {
   // 마지막 슬라이드 루프되서 반복재생
   loop: true,
 });
-
 new Swiper('.promotion .swiper-container',{
   // direction: 'horizontal', // 기본값이라 입력안해도됨.
   slidesPerView: 3, // 한번에 보여줄 슬라이드 개수
@@ -109,7 +110,7 @@ new Swiper('.awards .swiper-container', {
   }
 });
 
-
+/// js기본문법 - 스벅 프로모션 ↑ 접어었다펴기
 const promotionEl = document.querySelector('.promotion');
 const promotionToggleBtn = document.querySelector('.toggle-promotion')
 let isHidePromotion = false;
@@ -151,13 +152,13 @@ floatingObject('.floating1', 1, 25);
 floatingObject('.floating2', .5, 25);
 floatingObject('.floating3', 1.5, 30);
 
-// ScrollMagic : 스크롤 됬을때 애니메이션 실행하기
+/// ScrollMagic : 스크롤 됬을때 애니메이션 실행하기
 const spyEls = document.querySelectorAll('section.scroll-spy')
 spyEls.forEach(function(spyEl) {
   new ScrollMagic
     .Scene({
       triggerElement: spyEl, // 보여짐 여부를 감시할 요소를 지정
-      triggerHook: .8
+      triggerHook: .8 // 뷰포트 상단에서 80% 스크롤됬을때 실행
     })
     .setClassToggle(spyEl, 'show')
     .addTo(new ScrollMagic.Controller());
